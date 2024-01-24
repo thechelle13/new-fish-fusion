@@ -1,24 +1,39 @@
-const {boatInventory} = require("./fishingBoat.js")
+// Import the boatInventory function from the fishingBoat module.
+const { boatInventory } = require("./fishingBoat.js");
 
-const inventory = boatInventory()
+// Invoke the boatInventory function to get the fish inventory.
+const inventory = boatInventory();
 
-const boatInventoryNew = []
+// Create an array to store a modified inventory based on certain conditions.
+const boatInventoryNew = [];
 
+// Iterate through the original inventory to filter and modify data.
 for (const fish of inventory) {
-    if (fish.amount >+ 10 && fish.price <= 7.50){
-        boatInventoryNew.push(fish)
+    // Check if the fish amount is greater than or equal to 10 and the price is less than or equal to 7.50.
+    if (fish.amount >= 10 && fish.price <= 7.50) {
+        // Push the fish into the new modified inventory.
+        boatInventoryNew.push(fish);
     }
 }
 
-const menu = []
+// Create an array to store the final menu items.
+const menu = [];
 
+// Define a function called mongerInventory.
 const mongerInventory = () => {
-    for ( const selection of boatInventoryNew) {
+    // Iterate through the modified inventory to filter and modify data.
+    for (const selection of boatInventoryNew) {
+        // Check if the selection price is less than or equal to 5 and the amount is greater than or equal to 10.
         if (selection.price <= 5 && selection.amount >= 10) {
-            selection.amount = 10
-            menu.push(selection)
+            // Set the selection amount to 10.
+            selection.amount = 10;
+            // Push the selection into the final menu.
+            menu.push(selection);
         }
-        } return menu
-    } 
+    }
+    // Return the final menu.
+    return menu;
+};
 
-module.exports = {mongerInventory}
+// Export the mongerInventory function for use in other modules.
+module.exports = { mongerInventory };

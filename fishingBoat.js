@@ -1,3 +1,4 @@
+// Define an array of fish inventory with different attributes for each fish.
 const fishInventory = [
     { id: 1, species: "Halibut", weight: 6, price: 3.55, amount: 30 },
     { id: 2, species: "Mackerel", weight: 3, price: 4.10, amount: 48 },
@@ -7,11 +8,12 @@ const fishInventory = [
     { id: 6, species: "Orange Roughy", weight: 4, price: 6.95, amount: 37 },
     { id: 7, species: "Tuna", weight: 18, price: 8.66, amount: 5 },
     { id: 8, species: "Puffer", weight: 2, price: 9.84, amount: 52 }
-]
+];
 
+// Define a function called boatInventory that returns the fish inventory.
 const boatInventory = () => {
-return fishInventory
-}
+    return fishInventory;
+};
 
-
-module.exports = { boatInventory }
+// Export the boatInventory function for use in other modules.
+module.exports = { boatInventory };
