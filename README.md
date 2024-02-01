@@ -1,7 +1,5 @@
 ## Practice
 
-- source https://github.com/nashville-software-school/client-side-mastery/blob/master/projects/tier-1/fish-fusion/README.md
-
 -in progress
 
 ## Project Flow
